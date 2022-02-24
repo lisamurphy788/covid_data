@@ -26,7 +26,7 @@ def get_record_data():
         print("Please record covid cases from todays date")
         print("The following headings must be updated\n")
         print("Date, CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
-        print("Example: 04/02/2022,1,0,0,1,0\n")
+        print("Example: DDMMYYYY,1,0,0,1,0\n")
 
         data_str = input("Enter your data here:")
 
@@ -56,6 +56,16 @@ def validate_data(values):
     
     return True
 
+def update_record_worksheet(data):
+    """
+    updating the worksheet from the user inputs 
+    """
+    print("updating record worksheet\n")
+    record_worksheet = SHEET.worksheet("Record_Covid_Case")
+    record_worksheet.append_row(data)
+    print("Data Recorded Succesfully")
 
 
 data = get_record_data()
+record_data= [int(num) for num in data]
+update_record_worksheet(record_data)
