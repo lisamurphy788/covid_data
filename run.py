@@ -22,15 +22,21 @@ def get_record_data():
     """
     Record covid data from the user
     """
-    print("Please record covid cases from todays date")
-    print("The following headings must be updated\n")
-    print("Date, CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
-    print("Example: 04/02/2022,1,0,0,1,0\n")
+    while True:
+        print("Please record covid cases from todays date")
+        print("The following headings must be updated\n")
+        print("Date, CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
+        print("Example: 04/02/2022,1,0,0,1,0\n")
 
-    data_str = input("Enter your data here:")
+        data_str = input("Enter your data here:")
 
-    record_data = data_str.split(",")
-    validate_data(record_data)
+        record_data = data_str.split(",")
+        
+        if validate_data(record_data):
+            print("Data is valid")
+            break
+
+    return record_data
 
 def validate_data(values):
     """
@@ -46,8 +52,10 @@ def validate_data(values):
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
+        return False
+    
+    return True
 
-    print(values)
 
 
-get_record_data()
+data = get_record_data()
