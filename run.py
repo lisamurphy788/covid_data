@@ -28,6 +28,25 @@ def get_record_data():
     print("Example: 04/02/2022,1,0,0,1,0\n")
 
     data_str = input("Enter your data here:")
-    print(f"The data you provided is {data_str}")
+
+    record_data = data_str.split(",")
+    validate_data(record_data)
+
+def validate_data(values):
+    """
+    all values to integers
+    presents error if cannot convert string to integers
+    looks for exactly 6 inputs with the first input a date
+    """
+    try:
+        if len(values) != 6:
+            raise ValueError(
+                f"6 values are required, you provided {len(values)}"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        
+    print(values)
+
 
 get_record_data()
