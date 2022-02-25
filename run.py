@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials 
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -13,7 +14,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('covid_data')
 
 """
-record = SHEET.worksheet('Record_Covid_Case')
+record = SHEET.worksheet('record')
 
 data = record.get_all_values()
 """
@@ -61,11 +62,29 @@ def update_record_worksheet(data):
     updating the worksheet from the user inputs 
     """
     print("updating record worksheet\n")
-    record_worksheet = SHEET.worksheet("Record_Covid_Case")
+    record_worksheet = SHEET.worksheet("record")
     record_worksheet.append_row(data)
     print("Data Recorded Succesfully")
 
+def calculate_covid_data(summary):
+    """
+    Get totals after data entry
 
-data = get_record_data()
-record_data= [int(num) for num in data]
-update_record_worksheet(record_data)
+    """
+    print("Updating covid data total results show...\n")
+    summary = SHEET.worksheet("summary").get_all_values()
+    summary_row = summary[-1]
+    print(summary_row)
+
+def main():
+    """
+    Run all functions 
+    """
+    data = get_record_data()
+    record_data= [int(num) for num in data]
+    update_record_worksheet(record_data)
+    calculate_covid_data(record_data)
+
+
+print("Welcome to Covid Data Entry and Stats\n")
+main()
