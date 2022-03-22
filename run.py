@@ -1,5 +1,5 @@
 import gspread
-from google.oauth2.service_account import Credentials 
+from google.oauth2.service_account import Credentials
 from pprint import pprint
 
 SCOPE = [
@@ -19,10 +19,12 @@ record = SHEET.worksheet('record')
 data = record.get_all_values()
 """
 
-def get_record_data():
-    """
-    Record covid data from the user
-    """
+def get_record_data()
+
+"""
+Record covid data from the user
+"""
+
     while True:
         print("Please record covid cases from todays date")
         print("The following headings must be updated\n")
