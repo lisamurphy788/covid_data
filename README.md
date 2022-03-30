@@ -90,16 +90,30 @@ Once the application is opened in Heroku the terminal will request the user to p
 
 
 
-## 6. Deployment
+## 7. Deployment
 
-Steps for deployment:
-1. Clone this repository in Github
-2. Create [Heroku](https://dashboard.heroku.com/apps) app
-3. Under settings tab, add Python and Node.js buildpacks in this order
-4. Under settings tab, add PORT and 8000 to config vars.
-5. Under deploy tab, link the Heroku app to this repository.
-6. Deploy app
+The game was deployed via Heroku. I followed the same insturctions that were given in the love sandwiches tutorial. 
+1. Sign in to the Heroku website 
+2. Create new app
+3. Enter the app name and chose Europe as a region 
+4. Select the app and go to settings. 
+5. Under settings tab, config vars and click reveal config vars, there are two config vars that need to be set,  1st. -  is CREDS.json file, and the 2nd -  is to set the PORT to 8000
+6. Go to buildpack button. Select python and node.js and they must be in that order. 
+7. Under deploy tab, link the Heroku app to the correct repository and connect
+8. Confirm the correct branch and choose either to automatically or manually deploy your app. Then did a manually build pack. 
+9. The Build process will begin and once finished you get a message to confirm. 
 
 
 
-## 7. Credits
+## 8. Credits
+- Love Sandwiches project
+
+## Acknowledgements
+- Tutor support - i got a huge amount of help and guidance from Scott and John. 
+- My Mentor
+- My cohort facilitator
+- My Classmates
+- Community on Slack
+
+
+
