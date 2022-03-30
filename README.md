@@ -15,7 +15,7 @@ Once the application is opened in Heroku the terminal will request the user to p
 # 2. User Experience
 
 ## 2.1 User Stories 
-1. As a user, I want to be able to enter in the daily data. 
+1. As a user, I want to be able to enter in the daily Covid data. 
 2. As a user, I want the daily data to update the overall summary data.
 3. As a user, I want to see my inputs.
 4. As a user, i want my excel to update once i have all my inputs entered.
@@ -29,35 +29,28 @@ Once the application is opened in Heroku the terminal will request the user to p
 ## 3.1 All features
 
 1. Welcome page:
-![welcome page](readmeimages/welcome.png)
-- Welcomes the players and asks for their names.
 
-2. Instructions & first go:
-![instructions page](readmeimages/instructions.png)
-- Give instructions on ho to play Connect four to the players. 
-- Print the board for the first player to use. 
-- Ask the first player for their selection. They can choose a column from 0 to 6.
-- The player needs to type the number into the terminal.
+![welcome page](readmeimages/enteryourdata.PNG)
 
-3. Players turn:
-![piece drop](readmeimages/piecedrop.png)
-- The players take it in turns to drop their pieces. 
-- As you can see in the image above, Ange's pieces are "1" and Tom's pieces are "2".
+- Welcomes the user and requests the Covid Data inputs. 
 
-4. Player wins:
-![win](readmeimages/win.png)
-- When a player gets 4 pieces in a row the game is over. 
-- The terminal prints who the winner is.
-- The terminal asks the players if they would like to play again. 
-- If they select Y it will take them to the start. 
-- If they select N it will thank them for playing. 
+2. Results 
+
+![Record Data](readmeimages/dataentered.PNG)
+- The Data is entered and the data is checked to make sure it is valid. So that there are the required number of inputs which is 5 and that all the inputs are numbers.
+- If four numbers were entered the following error message would appear. 
+
+![Error message](readmeimages/validationerror.PNG)
+
+- Also if a letter was entered instead of a number then the following message would appear. 
+
+![Error message](readmeimages/errormsgtwo.PNG)
+
+
 
 
 ## 3.2 Features to implement:
-1. Play agianst the computer
-2. Users to recieve a message if the game is a draw. 
-3. Score Board. 
-4. Colour markers for players.
+
 
 
 
@@ -67,15 +60,24 @@ Once the application is opened in Heroku the terminal will request the user to p
 * [Gitpod](https://www.gitpod.io/) - Coding workspace
 * [Github/ Github pages](https://github.com/)- Commit my code
 * [Am I responsive?](http://ami.responsivedesign.is/#)- To see display the website as mock ups  
-* [NumPy](https://numpy.org/) - To create a matrix for the board. 
-* [termcolor](https://pypi.org/project/termcolor/) - To change the colors of the error messages and the welcome/end message. 
+* 
+* 
 
 
 
 # 5. Testing 
- -  Used [PEP8 Python Validator](https://validator.w3.org/#validate_by_input) to check Python content.
-- Validate user input tested for intergers, full colums and numbers over 6. 
-- Tested in Gitpod terminal and Heroku. 
+- I used [PEP8 Python Validator](https://validator.w3.org/#validate_by_input) to check python code for errors 
+- PEP8 code validator and returned no errors
+
+![PEP8 Validator](readmeimages/pep8validator.PNG)
+
+- Throughout the project developement i was contineously testing through print statements on the gitpod terminal. 
+- Continued testing on Heroku to try to improve the appearance of the data.
+
+# 6. Bugs
+- I came accross a number of bugs. 
+- creds.json file
+- initally when i set up the excel file to link it to the 
 
 ## 6. Deployment
 
