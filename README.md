@@ -49,7 +49,16 @@ Once the application is opened in Heroku the terminal will request the user to p
 
 
 
-## 3.2 Features to implement:
+## 3.2 Future Features to implement:
+- Option to have a list of numbers to choose so the user picks what fuction they would like to use. 
+Example press 
+1. To Enter data
+2. View summary totals
+3. To view total Confirmed Covid Case
+4. To view total Hospitalised Case
+5. To view total Male Cases
+6. To view total female Cases
+7. To view total Covid Deaths
 
 
 
@@ -60,8 +69,7 @@ Once the application is opened in Heroku the terminal will request the user to p
 * [Gitpod](https://www.gitpod.io/) - Coding workspace
 * [Github/ Github pages](https://github.com/)- Commit my code
 * [Am I responsive?](http://ami.responsivedesign.is/#)- To see display the website as mock ups  
-* 
-* 
+
 
 
 
@@ -75,13 +83,13 @@ Once the application is opened in Heroku the terminal will request the user to p
 - Continued testing on Heroku to try to improve the appearance of the data.
 
 - User story testing
-1. As a user, I want to be able to enter in the daily Covid data. YES
-2. As a user, I want the daily data to update the overall summary data.YES 
-3. As a user, I want to see my inputs.YES 
-4. As a user, i want my excel to update once i have all my inputs entered. YES 
-5. As a user, I want to be able to see the totals per column eg, Covid Confirmed Cases, Hospitalisations, Male, Female and Total Deaths after the data has ran.YES 
-6. As a user, I want to know if i have entered in too many or too few inputs. YES
-7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. YES
+1. As a user, I want to be able to enter in the daily Covid data. COMPLETED 
+2. As a user, I want the daily data to update the overall summary data.COMPLETED 
+3. As a user, I want to see my inputs.COMPLETED  
+4. As a user, I want my excel to update once I have all my inputs entered. COMPLETED 
+5. As a user, I want to be able to see the totals per column eg, Covid Confirmed Cases, Hospitalisations, Male, Female and Total Deaths after the data has ran.COMPLETED  
+6. As a user, I want to know if i have entered in too many or too few inputs. COMPLETED 
+7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. COMPLETED 
 
 I have provided screen shots for all of the above in the features section. 
 
