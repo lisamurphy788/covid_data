@@ -130,6 +130,32 @@ def get_last_entry_summary():
         columns.append(column[-1:])
     print(columns)
 
+def get_total_hospitalised_covid():
+    """
+    provides totals of the summary sheet with covid 
+
+     """
+    summary = SHEET.worksheet("summary")
+
+    columns = []
+    column = summary.col_values(2)
+    columns.append(column[-1])
+    print(columns)
+
+
+def get_total_males_covid():
+    """
+    provides totals of the summary sheet with covid 
+
+     """
+    summary = SHEET.worksheet("summary")
+
+    columns = []
+    column = summary.col_values(3)
+    columns.append(column[-1])
+    print(columns)
+
+
 def get_total_females_covid():
     """
     provides totals of the summary sheet with covid 
@@ -141,7 +167,20 @@ def get_total_females_covid():
     column = summary.col_values(4)
     columns.append(column[-1])
     print(columns)
-    
+
+def get_total_deaths_covid():
+    """
+    provides totals of the summary sheet with covid 
+
+     """
+    summary = SHEET.worksheet("summary")
+
+    columns = []
+    column = summary.col_values(5)
+    columns.append(column[-1])
+    print(columns)
+
+
 def main():
     """
     Run all functions 
@@ -160,4 +199,9 @@ print("Welcome to Covid Data Entry and Stats\n")
 # main()
 
 get_last_entry_summary()
+get_total_hospitalised_covid()
+get_total_males_covid()
 get_total_females_covid()
+get_total_deaths_covid()
+
+
