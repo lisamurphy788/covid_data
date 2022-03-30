@@ -60,17 +60,18 @@ def validate_data(values):
         return False
     
     return True
-
-def update_record_worksheet(data):
     """
-    updating the worksheet from the user inputs 
+    def update_record_worksheet(data):
+    """
+    """
+    updating the worksheet from the user inputs """
     """
     print("updating record worksheet\n")
     record_worksheet = SHEET.worksheet("record")
     record_worksheet.append_row(data)
 
     print("Data Recorded Succesfully")
-
+    """
 def calculate_covid_data(summary_data):
     """
     Get totals after data entry
@@ -81,6 +82,9 @@ def calculate_covid_data(summary_data):
     record = SHEET.worksheet("record").get_all_values()
     record_row = record[-1]
     """print(f"summary row: {summary_row}")"""
+    summary = SHEET.worksheet("summary").get_all_values()
+    summary_row = summary [-1]
+
     summary_data = []
     for summary, record in zip(summary_row, record_row):
         summary = int(summary) + record
@@ -88,9 +92,10 @@ def calculate_covid_data(summary_data):
 
     print(summary_data)
 
-def update_summary_worksheet(data):
     """
-    Updates the work sheet to include the new data just entered
+    def update_summary_worksheet(data):
+    """
+    """Updates the work sheet to include the new data just entered"""
 
     """
     print("updating summary worksheet\n")
@@ -98,7 +103,45 @@ def update_summary_worksheet(data):
     summary_worksheet.append_row(data)
 
     print("Data Recorded Succesfully")
+    """
+def update_worksheet(data, worksheet):
+   
+    """
+    updates the worksheets accordingly for both record and summary
+    """
+    print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+    print(f"{worksheet} worksheet updated successfully\n")
 
+def get_last_entry_summary():
+    """
+    provides totals of the summary sheet with covid 
+
+     """
+    summary = SHEET.worksheet("summary")
+    #column = summary.col_values(1,6)
+    # print(column)
+    
+    columns = []
+
+    for ind in range(1,6):
+        column = summary.col_values(ind)
+        columns.append(column[-1:])
+    print(columns)
+
+def get_total_females_covid():
+    """
+    provides totals of the summary sheet with covid 
+
+     """
+    summary = SHEET.worksheet("summary")
+
+    columns = []
+    column = summary.col_values(4)
+    columns.append(column[-1])
+    print(columns)
+    
 def main():
     """
     Run all functions 
@@ -106,11 +149,15 @@ def main():
     data = get_record_data()
     record_data= [int(num) for num in data]
     summary_data=[int(num)for num in data]
-    update_record_worksheet(record_data)
-    calculate_covid_data(summary_data)
+    """update_record_worksheet(record_data)"""
+    update_worksheet(record_data, record)
+    """calculate_covid_data(summary_data)"""
     new_summary_data = calculate_covid_data(summary_data)
-    print(new_summary_data)
+    update_worksheet(summary_data, summary)
 
 
 print("Welcome to Covid Data Entry and Stats\n")
-main()
+# main()
+
+get_last_entry_summary()
+get_total_females_covid()
