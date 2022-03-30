@@ -80,17 +80,29 @@ def calculate_covid_data(summary_data):
 
     print("Updating covid data total results show...\n")
     record = SHEET.worksheet("record").get_all_values()
+    print(f"RECORD SHEET: {record}")
     record_row = record[-1]
-    """print(f"summary row: {summary_row}")"""
-    #summary_data = data_str.split(",")
+    print(f"RECORD ROW: {record_row}")
+    # summary_data = data_str.split(",")
     summary = SHEET.worksheet("summary").get_all_values()
-    #summary_row() = []
-    #for summary, record in zip(summary_row, record_row):
-        #summary = int(summary_row) + record_row
-        #summary_row.append(summary)
-       
+    print(f"SUMMARY SHEET: {summary}")
+    summary_row = summary[-1]
+    print(f"SUMMARY ROW: {summary_row}")
 
-    print(summary_row)
+    new_summary_data = []
+    
+    #summary_row() = []
+    # for summary, record in zip(summary_row, record_row):
+    #     summary = int(summary_row) + record_row
+    #     summary_row.append(summary)
+
+    for x in range(len(record_row)):
+        new_summary_data.append(int(summary_row[x]) + int(record_row[x]))
+    print(f"NEW SUMMARY: {new_summary_data}")
+
+    return new_summary_data
+
+    # print(summary_row)
 
 def summary_row():
     """
@@ -201,9 +213,9 @@ def main():
     record_data = [int(num) for num in data]
     summary_data = [int(num)for num in data]
     update_worksheet(record_data, "record")
-    calculate_covid_data(summary_data)
+    calculate_covid_data(record_data)
     new_summary_data = calculate_covid_data(summary_data)
-    update_worksheet(summary_data, "summary")
+    update_worksheet(new_summary_data, "summary")
     get_last_entry_summary()
     get_total_hospitalised_covid()
     get_total_males_covid()
