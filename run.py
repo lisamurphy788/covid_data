@@ -152,7 +152,7 @@ def get_last_entry_summary():
     for ind in range(1,6):
         column = summary.col_values(ind)
         columns.append(column[-1:])
-    print(columns)
+    print(f"{columns}\n Summary Totals were successfully updated\n")
 
 def get_total_hospitalised_covid():
     """
@@ -164,7 +164,7 @@ def get_total_hospitalised_covid():
     columns = []
     column = summary.col_values(2)
     columns.append(column[-1])
-    print(columns)
+    #print(columns)
 
 
 def get_total_males_covid():
@@ -177,7 +177,7 @@ def get_total_males_covid():
     columns = []
     column = summary.col_values(3)
     columns.append(column[-1])
-    print(columns)
+    print(f"{columns} Total males with Covid\n")
 
 
 def get_total_females_covid():
@@ -190,7 +190,7 @@ def get_total_females_covid():
     columns = []
     column = summary.col_values(4)
     columns.append(column[-1])
-    print(columns)
+    print(f"{columns} Total Females with Covid\n")
 
 def get_total_deaths_covid():
     """
@@ -202,7 +202,7 @@ def get_total_deaths_covid():
     columns = []
     column = summary.col_values(5)
     columns.append(column[-1])
-    print(columns)
+    print(f"{columns} Total Covid Deaths\n")
 
 
 def main():
