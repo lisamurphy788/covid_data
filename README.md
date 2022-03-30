@@ -75,9 +75,20 @@ Once the application is opened in Heroku the terminal will request the user to p
 - Continued testing on Heroku to try to improve the appearance of the data.
 
 # 6. Bugs
-- I came accross a number of bugs. 
-- creds.json file
-- initally when i set up the excel file to link it to the 
+- I came accross few bugs. 
+1. creds.json file
+- initally when i set up the excel file to link it to the gitpod environment i never pinned it. So i left if for a week and came back to it and the creds.json file that i had in my gitignore had disappeared. Once i figured it out i copied over the creds file again and that fixed the issue. 
+2. Trailing whitespace 
+- I had a large number of trailing white space so i fixed that.
+3. Flake8 error messages
+- I just changed to flake8 linter to fix the errors. 
+4. Gitpod.yml - jupyter extension is not synced.
+- I have not fixed this as it is a known error and does not cause the code any problems. 
+
+
+
+
+
 
 ## 6. Deployment
 
