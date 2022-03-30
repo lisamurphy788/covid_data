@@ -10,21 +10,20 @@ The goal of the project was to create a database application that could be used 
 ##  How to use the tracker
 Once the application is opened in Heroku the terminal will request the user to provide inputs. 
 
-[Read more about the physical game](https://en.wikipedia.org/wiki/Connect_Four)
+[Read more about the Covid here](https://en.wikipedia.org/wiki/COVID-19)
 
 
 # 2. User Experience
 
 ## 2.1 User Stories 
-1. As a user, I want to be able to play a digital version of Connect Four. 
-2. As a user, I want instructions on how to play the game.
-3. As a user, I want to feel excited to play when I start the game.
-4. As a user, I need it to be clear whose turn is next. 
-5. As a user, I want to celebrate if I win. 
-6. As a user, I want the option to restart or quit the game easier when the game is over. 
+1. As a user, I want to be able to enter in the daily data. 
+2. As a user, I want the daily data to update the overall summary data.
+3. As a user, I want to see my inputs.
+4. As a user, i want my excel to update once i have all my inputs entered.
+5. As a user, I want to be able to see the totals per column eg, Covid Confirmed Cases, Hospitalisations, Male, Female and Total Deaths after the data has ran.
+6. As a user, I want to know if i have entered in too many or too few inputs. 
 7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. 
-8. As a user, I want the game to be easy to navigate and play. 
-9. As a user, I want to know who has won the game. 
+
 
 # 3. Features
 
