@@ -20,6 +20,10 @@ summary = SHEET.worksheet('summary')
 record_data = record.get_all_values()
 summary_data = summary.get_all_values()
 
+"""
+Adapted from Love Sandwiches
+"""
+
 
 def get_record_data():
     """
@@ -28,7 +32,7 @@ def get_record_data():
     """
 
     while True:
-        print("Please record covid cases from todays date")
+        print("Please record covid cases from today")
         print("The following headings must be updated\n")
         print("CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
         print("Example: 1,0,0,1,0\n")
@@ -45,9 +49,9 @@ def get_record_data():
 
 def validate_data(values):
     """
-    all values to integers
-    presents error if cannot convert string to integers
-    looks for exactly 5 inputs with the first input a date
+    All values to integers
+    Presents error if cannot convert string to integers
+    Looks for exactly 5 inputs with the first input a date
     """
     try:
         [int(value) for value in values]
@@ -63,7 +67,7 @@ def validate_data(values):
 
 def calculate_covid_data(summary_data):
     """
-    Get totals after data entry
+    Updates totals after data entry
 
     """
 
