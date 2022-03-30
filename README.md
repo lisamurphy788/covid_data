@@ -74,6 +74,17 @@ Once the application is opened in Heroku the terminal will request the user to p
 - Throughout the project developement i was contineously testing through print statements on the gitpod terminal. 
 - Continued testing on Heroku to try to improve the appearance of the data.
 
+- User story testing
+1. As a user, I want to be able to enter in the daily Covid data. YES
+2. As a user, I want the daily data to update the overall summary data.YES 
+3. As a user, I want to see my inputs.YES 
+4. As a user, i want my excel to update once i have all my inputs entered. YES 
+5. As a user, I want to be able to see the totals per column eg, Covid Confirmed Cases, Hospitalisations, Male, Female and Total Deaths after the data has ran.YES 
+6. As a user, I want to know if i have entered in too many or too few inputs. YES
+7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. YES
+
+I have provided screen shots for all of the above in the features section. 
+
 # 6. Bugs
 - I came accross few bugs. 
 1. creds.json file
