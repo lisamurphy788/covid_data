@@ -47,7 +47,7 @@ def validate_data(values):
     """
     all values to integers
     presents error if cannot convert string to integers
-    looks for exactly 6 inputs with the first input a date
+    looks for exactly 5 inputs with the first input a date
     """
     try:
         [int(value) for value in values]
@@ -145,7 +145,7 @@ def get_total_hospitalised_covid():
 
 def get_total_males_covid():
     """
-    provides totals of the summary sheet with covid 
+    provides total males with covid 
 
      """
     summary = SHEET.worksheet("summary")
@@ -158,7 +158,7 @@ def get_total_males_covid():
 
 def get_total_females_covid():
     """
-    provides totals of the summary sheet with covid 
+    provides total females with covid 
 
      """
     summary = SHEET.worksheet("summary")
@@ -170,7 +170,7 @@ def get_total_females_covid():
 
 def get_total_deaths_covid():
     """
-    provides totals of the summary sheet with covid 
+    provides total deaths with covid 
 
      """
     summary = SHEET.worksheet("summary")
@@ -186,22 +186,25 @@ def main():
     Run all functions 
     """
     data = get_record_data()
-    record_data= [int(num) for num in data]
-    summary_data=[int(num)for num in data]
-    """update_record_worksheet(record_data)"""
-    update_worksheet(record_data, record)
-    """calculate_covid_data(summary_data)"""
-    new_summary_data = calculate_covid_data(summary_data)
-    update_worksheet(summary_data, summary)
+    record_data = [int(num) for num in data]
+    #summary_data = [int(num)for num in data]
+    update_worksheet(record_data, "record")
+    #update_worksheet(record_data, record)
+    #calculate_covid_data(summary_data)
+    #new_summary_data = calculate_covid_data(summary_data)
+    #update_worksheet(summary_data, summary)
+    get_last_entry_summary()
+    get_total_hospitalised_covid()
+    get_total_males_covid()
+    get_total_females_covid()
+    get_total_deaths_covid()
+
 
 
 print("Welcome to Covid Data Entry and Stats\n")
-# main()
+main()
 
-get_last_entry_summary()
-get_total_hospitalised_covid()
-get_total_males_covid()
-get_total_females_covid()
-get_total_deaths_covid()
+
+
 
 
