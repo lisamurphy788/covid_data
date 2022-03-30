@@ -12,7 +12,6 @@ Once the application is opened in Heroku the terminal will request the user to p
 
 [Read more about the Covid here](https://en.wikipedia.org/wiki/COVID-19)
 
-
 # 2. User Experience
 
 ## 2.1 User Stories 
