@@ -13,23 +13,25 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('covid_data')
 
-"""
+
 record = SHEET.worksheet('record')
+summary = SHEET.worksheet('summary')
 
-data = record.get_all_values()
-"""
+record_data = record.get_all_values()
+summary_data = summary.get_all_values()
 
-def get_record_data()
 
-"""
-Record covid data from the user
-"""
+def get_record_data():
+    """
+    Record covid data from the user
+
+    """
 
     while True:
         print("Please record covid cases from todays date")
         print("The following headings must be updated\n")
-        print("Date, CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
-        print("Example: DDMMYYYY,1,0,0,1,0\n")
+        print("CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
+        print("Example: 1,0,0,1,0\n")
 
         data_str = input("Enter your data here:")
 
@@ -49,12 +51,12 @@ def validate_data(values):
     """
     try:
         [int(value) for value in values]
-        if len(values) != 6:
+        if len(values) != 5:
             raise ValueError(
-                f"6 values are required, you provided {len(values)}"
+                f"5 values are required, you provided {len(values)}"
             )
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+        print(f"❌  : {e}, please try again.\n")
         return False
     
     return True
@@ -66,17 +68,36 @@ def update_record_worksheet(data):
     print("updating record worksheet\n")
     record_worksheet = SHEET.worksheet("record")
     record_worksheet.append_row(data)
+
     print("Data Recorded Succesfully")
 
-def calculate_covid_data(summary):
+def calculate_covid_data(summary_data):
     """
     Get totals after data entry
 
     """
+
     print("Updating covid data total results show...\n")
-    summary = SHEET.worksheet("summary").get_all_values()
-    summary_row = summary[-1]
-    print(summary_row)
+    record = SHEET.worksheet("record").get_all_values()
+    record_row = record[-1]
+    """print(f"summary row: {summary_row}")"""
+    summary_data = []
+    for summary, record in zip(summary_row, record_row):
+        summary = int(summary) + record
+        summary_data.append(summary)
+
+    print(summary_data)
+
+def update_summary_worksheet(data):
+    """
+    Updates the work sheet to include the new data just entered
+
+    """
+    print("updating summary worksheet\n")
+    summary_worksheet = SHEET.worksheet("summary")
+    summary_worksheet.append_row(data)
+
+    print("Data Recorded Succesfully")
 
 def main():
     """
@@ -84,8 +105,11 @@ def main():
     """
     data = get_record_data()
     record_data= [int(num) for num in data]
+    summary_data=[int(num)for num in data]
     update_record_worksheet(record_data)
-    calculate_covid_data(record_data)
+    calculate_covid_data(summary_data)
+    new_summary_data = calculate_covid_data(summary_data)
+    print(new_summary_data)
 
 
 print("Welcome to Covid Data Entry and Stats\n")
