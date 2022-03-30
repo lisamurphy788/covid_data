@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -33,7 +33,7 @@ def get_record_data():
         print("CovidConfirmed, Hopitalised, Male, Female, TotalDeaths")
         print("Example: 1,0,0,1,0\n")
 
-        data_str = input("Enter your data here:")
+        data_str = input("Enter your data here:\n")
 
         record_data = data_str.split(",")
         
@@ -82,16 +82,28 @@ def calculate_covid_data(summary_data):
     record = SHEET.worksheet("record").get_all_values()
     record_row = record[-1]
     """print(f"summary row: {summary_row}")"""
+    #summary_data = data_str.split(",")
     summary = SHEET.worksheet("summary").get_all_values()
-    summary_row = summary [-1]
+    #summary_row() = []
+    #for summary, record in zip(summary_row, record_row):
+        #summary = int(summary_row) + record_row
+        #summary_row.append(summary)
+       
 
-    summary_data = []
+    print(summary_row)
+
+def summary_row():
+    """
+    Show the summary row calculation 
+    """
+    summary_row = summary[-1]
+    summary_row[1][0] = summary[-1]
+    summary_row.append([-1])
     for summary, record in zip(summary_row, record_row):
-        summary = int(summary) + record
-        summary_data.append(summary)
+        summary = int(summary_row) + record_row
+        summary_row.append(summary)
 
-    print(summary_data)
-
+    print(summary_row)
     """
     def update_summary_worksheet(data):
     """
@@ -187,12 +199,11 @@ def main():
     """
     data = get_record_data()
     record_data = [int(num) for num in data]
-    #summary_data = [int(num)for num in data]
+    summary_data = [int(num)for num in data]
     update_worksheet(record_data, "record")
-    #update_worksheet(record_data, record)
-    #calculate_covid_data(summary_data)
-    #new_summary_data = calculate_covid_data(summary_data)
-    #update_worksheet(summary_data, summary)
+    calculate_covid_data(summary_data)
+    new_summary_data = calculate_covid_data(summary_data)
+    update_worksheet(summary_data, "summary")
     get_last_entry_summary()
     get_total_hospitalised_covid()
     get_total_males_covid()
