@@ -27,7 +27,8 @@ Adapted from Love Sandwiches
 
 def get_record_data():
     """
-    Record covid data from the user
+    Record covid data from the user.
+    Requires the User to input data totals under the below headings
 
     """
 
@@ -51,7 +52,7 @@ def validate_data(values):
     """
     All values to integers
     Presents error if cannot convert string to integers
-    Looks for exactly 5 inputs with the first input a date
+    Looks for exactly 5 inputs
     """
     try:
         [int(value) for value in values]
@@ -68,7 +69,7 @@ def validate_data(values):
 def calculate_covid_data(summary_data):
     """
     Updates totals after data entry
-
+    Creates a new summary total
     """
 
     print("Updating covid data total results show...\n")
@@ -92,7 +93,7 @@ def calculate_covid_data(summary_data):
 
 def update_worksheet(data, worksheet):
     """
-    updates the worksheets accordingly for both record and summary
+    Updates the worksheets accordingly for both record and summary
     """
     print(f"Updating {worksheet} worksheet...\n")
     worksheet_to_update = SHEET.worksheet(worksheet)
@@ -102,8 +103,8 @@ def update_worksheet(data, worksheet):
 
 def get_last_entry_summary():
     """
-    provides totals of the summary sheet with covid
-     """
+    Provides totals of the summary sheet with covid
+    """
     summary = SHEET.worksheet("summary")
     columns = []
 
@@ -115,8 +116,8 @@ def get_last_entry_summary():
 
 def get_total_hospitalised_covid():
     """
-    provides totals of the summary sheet with covid
-     """
+    Provides total Hospitalised and displays on terminal
+    """
     summary = SHEET.worksheet("summary")
 
     columns = []
@@ -127,9 +128,8 @@ def get_total_hospitalised_covid():
 
 def get_total_males_covid():
     """
-    provides total males with covid
-
-     """
+    Provides total males with covid and displays on terminal
+    """
     summary = SHEET.worksheet("summary")
 
     columns = []
@@ -140,8 +140,8 @@ def get_total_males_covid():
 
 def get_total_females_covid():
     """
-    provides total females with covid
-     """
+    Provides total females with covid and displays on terminal
+    """
     summary = SHEET.worksheet("summary")
 
     columns = []
@@ -152,8 +152,8 @@ def get_total_females_covid():
 
 def get_total_deaths_covid():
     """
-    provides total deaths with covid
-     """
+    Provides total deaths with covid and displays on terminal
+    """
     summary = SHEET.worksheet("summary")
 
     columns = []
