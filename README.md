@@ -4,7 +4,7 @@
 [Link to Covid Data Tracker](https://covid-data2022.herokuapp.com/)
 
 # 1. Project Goals
-The goal of the project was to create a database application that could be used to record covid data. During the pandemic the news use to update the country on numbers stats etc. The application should allow a user to record the daily cases of covid and provide a updated summary once that data has been inputted. 
+The goal of the project was to create a database application that could be used to record covid data. During the pandemic the media recorded the update to the country on numbers stats etc. The application should allow a user to record the daily cases of covid and provide a updated summary once that data has been inputted. 
 
 ![Image of home screen](/readmeimages/enteryourdata.PNG)
 ##  How to use the tracker
