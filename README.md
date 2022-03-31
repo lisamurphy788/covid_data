@@ -58,13 +58,13 @@ New Summary Results
 
 - The data is then updated and shows the new results updated to the summary sheet under the New Summary row adding the data entered to the last row of the summary sheet. 
 
-![new summary results](readmeimages/summarytotals.PNG)
+![new summary results](readmeimages/newsummaryresults.PNG)
 
 Totals Displayed 
 
 - The new totals displayed to break down each of the column headings so the user knows the new results and is easly viewed. 
 
-![New Totals displayed](readmeimages/newsummaryresults.PNG)
+![New Totals displayed](readmeimages/summarytotals.PNG)
 
 
 ## 3.2 Future Features to implement:
