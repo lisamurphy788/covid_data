@@ -3,7 +3,7 @@
 
 [Link to Covid Data Tracker](https://covid-data2022.herokuapp.com/)
 
-# 1. Project Goals
+# Project Goals
 The goal of the project was to create a database application that could be used to record covid data. During the pandemic the media recorded and updated the country on numbers stats etc. The application should allow a user to record the daily cases of covid and provide a updated summary once that data has been inputted. 
 
 ![Image of home screen](/readmeimages/enteryourdata.PNG)
@@ -12,9 +12,9 @@ Once the application is opened in Heroku the terminal will request the user to p
 
 [Read more about the Covid here](https://en.wikipedia.org/wiki/COVID-19)
 
-# 2. User Experience
+# User Experience
 
-## 2.1 User Stories 
+## User Stories 
 1. As a user, I want to be able to enter in the daily Covid data. 
 2. As a user, I want the daily data to update the overall summary data.
 3. As a user, I want to see my inputs.
@@ -24,9 +24,9 @@ Once the application is opened in Heroku the terminal will request the user to p
 7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. 
 
 
-# 3. Features
+# Features
 
-## 3.1 All features
+## All features
 
 1. Welcome page:
 
@@ -67,7 +67,7 @@ Totals Displayed
 ![New Totals displayed](readmeimages/summarytotals.PNG)
 
 
-## 3.2 Future Features to implement:
+## Future Features to implement:
 - Option to have a list of numbers to choose so the user picks what fuction they would like to use. 
 Example press 
 1. To Enter data
@@ -79,7 +79,7 @@ Example press
 7. To view total Covid Deaths
 
 
-# 4. Technologies used 
+# Technologies used 
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Content and structure
 * [Heroku](https://id.heroku.com/login) - Host
 * [Gitpod](https://www.gitpod.io/) - Coding workspace
@@ -87,16 +87,18 @@ Example press
 * [Am I responsive?](http://ami.responsivedesign.is/#)- To see display the website as mock ups  
 
 
-# 5. Testing 
+# Testing 
+- Throughout the project developement I was contineously testing through print statements on the gitpod terminal. 
+- Continued testing on Heroku to try to improve the appearance of the data.
+
+## Validator Testing 
 - I used [PEP8 Python Validator](https://validator.w3.org/#validate_by_input) to check python code for errors 
 - PEP8 code validator and returned no errors
 
 ![PEP8 Validator](readmeimages/pep8validator.PNG)
 
-- Throughout the project developement i was contineously testing through print statements on the gitpod terminal. 
-- Continued testing on Heroku to try to improve the appearance of the data.
 
-- User story testing
+## User story testing
 1. As a user, I want to be able to enter in the daily Covid data. COMPLETED 
 2. As a user, I want the daily data to update the overall summary data.COMPLETED 
 3. As a user, I want to see my inputs.COMPLETED  
@@ -107,7 +109,7 @@ Example press
 
 I have provided screen shots for all of the above in the features section. 
 
-# 6. Bugs
+## Bugs
 - I came accross few bugs. 
 1. creds.json file
 - Initally when I set up the excel file to link it to the gitpod environment I never pinned it. So I left if for a week and came back to it and the creds.json file that I had in my gitignore had disappeared. Once I became aware I went back over the set up of the files and just copied over the file again and everything worked.  
@@ -119,7 +121,7 @@ I have provided screen shots for all of the above in the features section.
 - I have not fixed this as it is a known error and does not cause the code any problems. 
 
 
-## 7. Deployment
+# Deployment
 
 The game was deployed via Heroku. I followed the same insturctions that were given in the love sandwiches tutorial. 
 1. Sign in to the Heroku website 
@@ -133,10 +135,12 @@ The game was deployed via Heroku. I followed the same insturctions that were giv
 9. The Build process will begin and once finished you get a message to confirm. 
 
 
-## 8. Credits
+# Credits
 - Love Sandwiches project
+- Code Institute 
 
-## Acknowledgements
+
+# Acknowledgements
 - Tutor support - I recieved a huge amount of help and guidance from Scott and John in tutor support. 
 - My Mentor
 - My cohort facilitator
