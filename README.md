@@ -40,13 +40,31 @@ Once the application is opened in Heroku the terminal will request the user to p
 - The Data is entered and the data is checked to make sure it is valid. So that there are the required number of inputs which is 5 and that all the inputs are numbers.
 - If four numbers were entered the following error message would appear. 
 
+Validation Messages
+
 ![Error message](readmeimages/validationerror.PNG)
 
 - Also if a letter was entered instead of a number then the following message would appear. 
 
 ![Error message](readmeimages/errormsgtwo.PNG)
 
+Updating Results 
 
+- When all the data is entered correctly it will update the total results and display the entries in the record sheet, and the record row. Then it displays the summary sheet entries. 
+
+![updating dating results](readmeimages/updatingresults.PNG)
+
+New Summary Results 
+
+- The data is then updated and shows the new results updated to the summary sheet under the New Summary row adding the data entered to the last row of the summary sheet. 
+
+![new summary results](readmeimages/summarytotals.PNG)
+
+Totals Displayed 
+
+- The new totals displayed to break down each of the column headings so the user knows the new results and is easly viewed. 
+
+![New Totals displayed](readmeimages/newsummaryresults.PNG)
 
 
 ## 3.2 Future Features to implement:
