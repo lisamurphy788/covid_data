@@ -4,7 +4,7 @@
 [Link to Covid Data Tracker](https://covid-data2022.herokuapp.com/)
 
 # 1. Project Goals
-The goal of the project was to create a database application that could be used to record covid data. During the pandemic the media recorded the update to the country on numbers stats etc. The application should allow a user to record the daily cases of covid and provide a updated summary once that data has been inputted. 
+The goal of the project was to create a database application that could be used to record covid data. During the pandemic the media recorded and updated the country on numbers stats etc. The application should allow a user to record the daily cases of covid and provide a updated summary once that data has been inputted. 
 
 ![Image of home screen](/readmeimages/enteryourdata.PNG)
 ##  How to use the tracker
@@ -19,7 +19,7 @@ Once the application is opened in Heroku the terminal will request the user to p
 2. As a user, I want the daily data to update the overall summary data.
 3. As a user, I want to see my inputs.
 4. As a user, i want my excel to update once i have all my inputs entered.
-5. As a user, I want to be able to see the totals per column eg, Covid Confirmed Cases, Hospitalisations, Male, Female and Total Deaths after the data has ran.
+5. As a user, I want to be able to see the totals per column eg, the five totals in a row, then broken out individually, Hospitalisations, Male, Female and Total Deaths after the data has ran.
 6. As a user, I want to know if i have entered in too many or too few inputs. 
 7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. 
 
@@ -37,7 +37,7 @@ Once the application is opened in Heroku the terminal will request the user to p
 2. Results 
 
 ![Record Data](readmeimages/dataentered.PNG)
-- The Data is entered and the data is checked to make sure it is valid. So that there are the required number of inputs which is 5 and that all the inputs are numbers.
+- The data is entered and the data is checked to make sure it is valid. There are a required number of inputs, which in this case is 5 and that all the inputs are numbers seperated with a ','.
 - If four numbers were entered the following error message would appear. 
 
 Validation Messages
@@ -56,13 +56,13 @@ Updating Results
 
 New Summary Results 
 
-- The data is then updated and shows the new results updated to the summary sheet under the New Summary row adding the data entered to the last row of the summary sheet. 
+- The data is then updated and displays the new results updated to the summary sheet under the New Summary row adding the data entered to the last row of the summary sheet. 
 
 ![new summary results](readmeimages/newsummaryresults.PNG)
 
 Totals Displayed 
 
-- The new totals displayed to break down each of the column headings so the user knows the new results and is easly viewed. 
+- The new totals are displayed in a row to give the new totals includeing the newly entered data and then will break down the final four column headings so the user is aware of the new results and they are easly viewed. 
 
 ![New Totals displayed](readmeimages/summarytotals.PNG)
 
@@ -79,16 +79,12 @@ Example press
 7. To view total Covid Deaths
 
 
-
-
 # 4. Technologies used 
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Content and structure
 * [Heroku](https://id.heroku.com/login) - Host
 * [Gitpod](https://www.gitpod.io/) - Coding workspace
 * [Github/ Github pages](https://github.com/)- Commit my code
 * [Am I responsive?](http://ami.responsivedesign.is/#)- To see display the website as mock ups  
-
-
 
 
 # 5. Testing 
@@ -105,7 +101,7 @@ Example press
 2. As a user, I want the daily data to update the overall summary data.COMPLETED 
 3. As a user, I want to see my inputs.COMPLETED  
 4. As a user, I want my excel to update once I have all my inputs entered. COMPLETED 
-5. As a user, I want to be able to see the totals per column eg, Covid Confirmed Cases, Hospitalisations, Male, Female and Total Deaths after the data has ran.COMPLETED  
+5. As a user, I want to be able to see the totals per column eg, the five totals in a row, then broken out individually, Hospitalisations, Male, Female and Total Deaths after the data has ran.COMPLETED  
 6. As a user, I want to know if i have entered in too many or too few inputs. COMPLETED 
 7. As a user, I want to know if I have made an error and recieve feedback on ho to correct this. COMPLETED 
 
@@ -114,17 +110,13 @@ I have provided screen shots for all of the above in the features section.
 # 6. Bugs
 - I came accross few bugs. 
 1. creds.json file
-- initally when i set up the excel file to link it to the gitpod environment i never pinned it. So i left if for a week and came back to it and the creds.json file that i had in my gitignore had disappeared. Once i figured it out i copied over the creds file again and that fixed the issue. 
+- Initally when I set up the excel file to link it to the gitpod environment I never pinned it. So I left if for a week and came back to it and the creds.json file that I had in my gitignore had disappeared. Once I became aware I went back over the set up of the files and just copied over the file again and everything worked.  
 2. Trailing whitespace 
-- I had a large number of trailing white space so i fixed that.
+- I had a large number of trailing white space so I went through that and fixed. 
 3. Flake8 error messages
-- I just changed to flake8 linter to fix the errors. 
+- I just changed to flake8 linter to fix the errors and went through each of the errors. 
 4. Gitpod.yml - jupyter extension is not synced.
 - I have not fixed this as it is a known error and does not cause the code any problems. 
-
-
-
-
 
 
 ## 7. Deployment
@@ -141,15 +133,14 @@ The game was deployed via Heroku. I followed the same insturctions that were giv
 9. The Build process will begin and once finished you get a message to confirm. 
 
 
-
 ## 8. Credits
 - Love Sandwiches project
 
 ## Acknowledgements
-- Tutor support - i got a huge amount of help and guidance from Scott and John. 
+- Tutor support - I recieved a huge amount of help and guidance from Scott and John in tutor support. 
 - My Mentor
 - My cohort facilitator
-- My Classmates
+- My classmates
 - Community on Slack
 
 
